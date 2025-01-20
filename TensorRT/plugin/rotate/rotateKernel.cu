@@ -706,7 +706,7 @@ __global__ void rotateKernel_int8(const int nthreads, int8_4 *output,
 }
 
 template <typename T>
-void rotate(T *output, T *input, T *angle, T *center, int *input_dims,
+void rotate(T *output, T *input, T *angle, T *center, int64_t *input_dims,
             RotateInterpolation interp, cudaStream_t stream) {
   int channel = input_dims[0];
   int height = input_dims[1];
@@ -719,7 +719,7 @@ void rotate(T *output, T *input, T *angle, T *center, int *input_dims,
 }
 
 void rotate_h2(__half2 *output, __half2 *input, __half *angle, __half *center,
-               int *input_dims, RotateInterpolation interp,
+               int64_t *input_dims, RotateInterpolation interp,
                cudaStream_t stream) {
   int channel = input_dims[0];
   int height = input_dims[1];
@@ -734,7 +734,7 @@ void rotate_h2(__half2 *output, __half2 *input, __half *angle, __half *center,
 template <typename T>
 void rotate_int8(int8_4 *output, float scale_o, const int8_4 *input,
                  float scale_i, const T *angle, const T *center,
-                 int *input_dims, RotateInterpolation interp,
+                 int64_t *input_dims, RotateInterpolation interp,
                  cudaStream_t stream) {
   int channel = input_dims[0];
   int height = input_dims[1];
@@ -748,19 +748,19 @@ void rotate_int8(int8_4 *output, float scale_o, const int8_4 *input,
 }
 
 template void rotate(float *output, float *input, float *angle, float *center,
-                     int *input_dims, RotateInterpolation interp,
+                     int64_t *input_dims, RotateInterpolation interp,
                      cudaStream_t stream);
 
 template void rotate(__half *output, __half *input, __half *angle,
-                     __half *center, int *input_dims,
+                     __half *center, int64_t *input_dims,
                      RotateInterpolation interp, cudaStream_t stream);
 
 template void rotate_int8(int8_4 *output, float scale_o, const int8_4 *input,
                           float scale_i, const float *angle,
-                          const float *center, int *input_dims,
+                          const float *center, int64_t *input_dims,
                           RotateInterpolation interp, cudaStream_t stream);
 
 template void rotate_int8(int8_4 *output, float scale_o, const int8_4 *input,
                           float scale_i, const __half *angle,
-                          const __half *center, int *input_dims,
+                          const __half *center, int64_t *input_dims,
                           RotateInterpolation interp, cudaStream_t stream);
