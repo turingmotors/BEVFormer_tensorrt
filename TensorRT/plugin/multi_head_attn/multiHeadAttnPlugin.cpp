@@ -307,7 +307,7 @@ void QKVPlugin::chooseAlgo(
     cudaEventElapsedTime(&time, start, end);
 
     if (status == CUBLAS_STATUS_SUCCESS) {
-      printf("[QKVPlugin::configurePlugin]: CUBLAS SUCCESS, TIME: %f\n", time);
+      // printf("[QKVPlugin::configurePlugin]: CUBLAS SUCCESS, TIME: %f\n", time);
       if (time < minTime) {
         minTime = time;
         mAlgo_1 = algo;
@@ -330,7 +330,7 @@ void QKVPlugin::chooseAlgo(
     cudaEventElapsedTime(&time, start, end);
 
     if (status == CUBLAS_STATUS_SUCCESS) {
-      printf("[QKVPlugin::configurePlugin]: CUBLAS SUCCESS, TIME: %f\n", time);
+      // printf("[QKVPlugin::configurePlugin]: CUBLAS SUCCESS, TIME: %f\n", time);
       if (time < minTime) {
         minTime = time;
         mAlgo_1 = algo;
@@ -366,7 +366,7 @@ void QKVPlugin::chooseAlgo(
     cudaEventElapsedTime(&time, start, end);
 
     if (status == CUBLAS_STATUS_SUCCESS) {
-      printf("[QKVPlugin::configurePlugin]: CUBLAS SUCCESS, TIME: %f\n", time);
+      // printf("[QKVPlugin::configurePlugin]: CUBLAS SUCCESS, TIME: %f\n", time);
       if (time < minTime) {
         minTime = time;
         mAlgo_2 = algo;
@@ -389,7 +389,7 @@ void QKVPlugin::chooseAlgo(
     cudaEventElapsedTime(&time, start, end);
 
     if (status == CUBLAS_STATUS_SUCCESS) {
-      printf("[QKVPlugin::configurePlugin]: CUBLAS SUCCESS, TIME: %f\n", time);
+      // printf("[QKVPlugin::configurePlugin]: CUBLAS SUCCESS, TIME: %f\n", time);
       if (time < minTime) {
         minTime = time;
         mAlgo_2 = algo;
@@ -449,7 +449,7 @@ void QKVPlugin::chooseAlgoINT8(
     cudaEventElapsedTime(&time, start, end);
 
     if (status == CUBLAS_STATUS_SUCCESS) {
-      printf("[QKVPlugin::configurePlugin]: CUBLAS SUCCESS, TIME: %f\n", time);
+      // printf("[QKVPlugin::configurePlugin]: CUBLAS SUCCESS, TIME: %f\n", time);
       if (time < minTime) {
         minTime = time;
         mAlgo_1 = algo;
@@ -472,7 +472,7 @@ void QKVPlugin::chooseAlgoINT8(
     cudaEventElapsedTime(&time, start, end);
 
     if (status == CUBLAS_STATUS_SUCCESS) {
-      printf("[QKVPlugin::configurePlugin]: CUBLAS SUCCESS, TIME: %f\n", time);
+      // printf("[QKVPlugin::configurePlugin]: CUBLAS SUCCESS, TIME: %f\n", time);
       if (time < minTime) {
         minTime = time;
         mAlgo_1 = algo;
@@ -508,7 +508,7 @@ void QKVPlugin::chooseAlgoINT8(
     cudaEventElapsedTime(&time, start, end);
 
     if (status == CUBLAS_STATUS_SUCCESS) {
-      printf("[QKVPlugin::configurePlugin]: CUBLAS SUCCESS, TIME: %f\n", time);
+      // printf("[QKVPlugin::configurePlugin]: CUBLAS SUCCESS, TIME: %f\n", time);
       if (time < minTime) {
         minTime = time;
         mAlgo_2 = algo;
@@ -531,7 +531,7 @@ void QKVPlugin::chooseAlgoINT8(
     cudaEventElapsedTime(&time, start, end);
 
     if (status == CUBLAS_STATUS_SUCCESS) {
-      printf("[QKVPlugin::configurePlugin]: CUBLAS SUCCESS, TIME: %f\n", time);
+      // printf("[QKVPlugin::configurePlugin]: CUBLAS SUCCESS, TIME: %f\n", time);
       if (time < minTime) {
         minTime = time;
         mAlgo_2 = algo;
